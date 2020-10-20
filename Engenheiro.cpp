@@ -4,8 +4,18 @@
 class Engenheiro : public Empregado {
 
   public:
-    std::string nome;  
-	int projetos;
+
+    void setNumProjetos (int projetos){
+      _numProjetos = projetos;
+    }
+
+    int getNumProjetos (){
+      return _numProjetos;
+    }
+
+  protected:
+
+	  int _numProjetos; // indica a quantidade de projetos em que o engenheiro está envolvido
 	
 };
 
