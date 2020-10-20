@@ -8,6 +8,11 @@ class Empregado {
 	
   public:
 
+    Empregado (std::string nome, double salario){
+      _nome = nome;
+      _salarioHora = salario;
+    }
+
     double TAXAHORAEXTRA = 0.5;// taxa que converte o salario do empregado para a quantia que deve receber por hora extra
     
     int JORNADAPADRAO = 8;//quantidade de horas que um empregado trabalha num dia comum, em que não há horas extras
@@ -27,6 +32,12 @@ class Empregado {
 
     double getSalarioHora (){
       return _salarioHora;
+    }
+
+    virtual void print (double horas){
+      std::cout << "Nome: " << getNome() << std::endl;
+      std::cout << "Salario Mes: " << pagamentoMes(horas) << std::endl;
+      std::cout << std::endl;
     }
 
 
